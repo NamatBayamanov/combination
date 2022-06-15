@@ -21,9 +21,8 @@ function ArticleSingle() {
     axios
       .get(
         `https://combination-309b1-default-rtdb.firebaseio.com/articles/${id}.json`
-      )
-      .then(({data}) => setArticle(data))
-  }, []);
+      ).then(({data}) => setArticle(data))
+  }, [article]);
 
 
 

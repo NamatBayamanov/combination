@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function ArticleUpdate() {
   const { id } = useParams();
@@ -19,7 +19,7 @@ function ArticleUpdate() {
         `https://combination-309b1-default-rtdb.firebaseio.com/articles/${id}.json`
       )
       .then(({data}) => setArticle(data))
-  }, []);
+  }, [article]);
 
 
   const onSubmit = (event) => {
