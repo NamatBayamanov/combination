@@ -28,6 +28,7 @@ function ArticleUpdate() {
 
     const formData = new FormData(event.target);
     // alert(`${formData.get("title")} ${formData.get("description")}`);
+    
     axios.put(`https://combination-309b1-default-rtdb.firebaseio.com/articles/${id}.json`, Object.fromEntries(formData.entries())).then(response => navigate(`/${id}`))
   }
 
